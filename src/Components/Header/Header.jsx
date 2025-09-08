@@ -16,6 +16,7 @@ const Header = () => {
 
         <nav className="hidden md:flex gap-6 font-semibold text-gray-600">
           <a href="#inicio" className="hover:text-[#008080]">Inicio</a>
+          <a href="#nosotros" className="hover:text-[#008080]">Nosotros</a>
           <a href="#servicios" className="hover:text-[#008080]">Servicios</a>
           <a href="#contacto" className="hover:text-[#008080]">Contacto</a>
         </nav>
@@ -28,6 +29,7 @@ const Header = () => {
       >
         <nav className="flex flex-col items-center gap-4 py-4">
           <a href="#inicio" onClick={() => setValidar(false)} className="hover:text-[#008080]">Inicio</a>
+          <a href="#nosotros" onClick={() => setValidar(false)} className="hover:text-[#008080]">Nosotros</a>
           <a href="#servicios" onClick={() => setValidar(false)} className="hover:text-[#008080]">Servicios</a>
           <a href="#contacto" onClick={() => setValidar(false)} className="hover:text-[#008080]">Contacto</a>
         </nav>
