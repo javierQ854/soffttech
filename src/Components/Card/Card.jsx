@@ -1,12 +1,10 @@
 import {especialidades} from '../../servicios/especialidades'
 import { useNavigate } from "react-router-dom"
-import { useAccion } from "../../Context/AccionContext";
+
 const Card = () => {
-    const {cambioEstado} = useAccion()
     const navigate = useNavigate()
     const navegar = (id)=>{
        if(id==1){
-        cambioEstado()
         navigate('desarrollo')
        } 
     }

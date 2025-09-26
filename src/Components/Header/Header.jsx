@@ -1,16 +1,19 @@
 import { Bars3Icon } from "@heroicons/react/24/solid";
 import { useState } from "react";
 import { useLocation } from "react-router-dom";
-
+import { useNavigate } from "react-router-dom";
 const Header = () => {
   const location = useLocation()
   const [validar, setValidar] = useState(false)
   const enDesarrollo = location.pathname === '/desarrollo'
-  
+  const navigate = useNavigate()
+  const navegar = ()=>{
+    navigate('/')
+  }
   return (
     <header className="shadow-md fixed w-full bg-white/70 z-50 backdrop-blur-sm">
       <div className="container mx-auto p-3 flex items-center justify-between">
-        <h1 className="text-2xl font-bold text-[#001f3f]">SofftTech</h1>
+        <h1 onClick={()=>navegar()} className="text-2xl cursor-pointer font-bold text-[#001f3f]">SofftTech</h1>
 
         <button
           className="md:hidden"
