@@ -1,1 +1,1 @@
-export {import} from "./Baner"
+export {default} from "./Baner"
