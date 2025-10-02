@@ -6,6 +6,8 @@ const Card = () => {
     const navegar = (id)=>{
        if(id==1){
         navigate('desarrollo')
+       }else if(id==2){
+        navigate('desarrolloMovile')
        } 
     }
 

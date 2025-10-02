@@ -6,6 +6,7 @@ const Header = () => {
   const location = useLocation()
   const [validar, setValidar] = useState(false)
   const enDesarrollo = location.pathname === '/desarrollo'
+  const enDesarrolloMovile = location.pathname ==='/desarrolloMovile'
   const navigate = useNavigate()
   const navegar = ()=>{
     navigate('/')
@@ -23,8 +24,8 @@ const Header = () => {
         </button>
 
         <nav className="hidden md:flex md:justify-center md:items-center gap-6 font-semibold text-gray-600">
-          <a href={enDesarrollo?'/':"#inicio"} className="hover:text-[#008080]">Inicio</a>
-          <div className={enDesarrollo ? 'hidden':'md:flex md:justify-center md:items-center gap-6'}>
+          <a href={enDesarrollo || enDesarrolloMovile ? '/':"#inicio"} className="hover:text-[#008080]">Inicio</a>
+          <div className={enDesarrollo || enDesarrolloMovile ? 'hidden':'md:flex md:justify-center md:items-center gap-6'}>
             <a href="#nosotros" className="hover:text-[#008080]">Nosotros</a>
             <a href="#servicios" className="hover:text-[#008080]">Servicios</a>
             <a href="#contacto" className="hover:text-[#008080]">Contacto</a>
