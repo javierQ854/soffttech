@@ -1,1 +1,1 @@
-export {import} from './Especialidades'
+export {default} from './Especialidades'
